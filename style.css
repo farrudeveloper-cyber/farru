@@ -190,3 +190,54 @@ font-weight:bold;
 @keyframes load{
 from{width:0}
 }
+
+/* ===== AGREGADO PARA LOS SERVIDORES ===== */
+
+.card{
+margin-top:40px;
+}
+
+.card-header{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.server-logo{
+width:40px;
+height:40px;
+border-radius:8px;
+object-fit:cover;
+}
+
+.card-header h3{
+flex:1;
+text-align:left;
+}
+
+/* BOTON DE RANGO A LA DERECHA */
+
+.role-btn{
+margin-left:auto;
+display:flex;
+align-items:center;
+gap:6px;
+background:#ff2b2b;
+padding:5px 12px;
+border-radius:6px;
+font-size:13px;
+font-weight:bold;
+color:white;
+box-shadow:0 0 8px rgba(255,0,0,0.6);
+transition:0.25s;
+}
+
+.role-btn::before{
+content:"★";
+font-size:12px;
+}
+
+.role-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px red;
+}
