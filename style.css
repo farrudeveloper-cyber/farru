@@ -1,5 +1,5 @@
 body{
-background:#0b0b0b;
+background:linear-gradient(180deg,#0b0b0b,#1a0000,#0b0b0b);
 color:white;
 font-family:Arial;
 margin:0;
@@ -10,12 +10,46 @@ display:flex;
 justify-content:space-between;
 padding:20px 40px;
 background:#111;
+align-items:center;
+}
+
+.nav-left{
+display:flex;
+align-items:center;
+gap:25px;
 }
 
 .logo{
 color:#ff2b2b;
 font-weight:bold;
 font-size:20px;
+}
+
+.nav-link{
+color:white;
+text-decoration:none;
+font-size:14px;
+position:relative;
+transition:0.3s;
+}
+
+.nav-link::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+background:#ff2b2b;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
+
+.nav-link:hover{
+color:#ff2b2b;
+}
+
+.nav-link:hover::after{
+width:100%;
 }
 
 .lang button{
@@ -53,8 +87,8 @@ animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
-from{ text-shadow:0 0 5px red; }
-to{ text-shadow:0 0 20px red; }
+from{text-shadow:0 0 5px red;}
+to{text-shadow:0 0 20px red;}
 }
 
 .desc{
@@ -84,6 +118,12 @@ box-shadow:0 0 15px red;
 .skills{
 padding:80px 20px;
 max-width:900px;
+margin:auto;
+text-align:center;
+}
+
+.skills-wrapper{
+max-width:600px;
 margin:auto;
 }
 
@@ -173,6 +213,12 @@ transform:scale(1.05);
 text-align:center;
 padding:80px 20px;
 background:#111;
+}
+
+.contact h2{
+font-size:28px;
+letter-spacing:2px;
+animation:glow 2s infinite alternate;
 }
 
 .discord-link{
