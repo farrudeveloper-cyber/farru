@@ -1,8 +1,9 @@
 body{
-background:linear-gradient(180deg,#0b0b0b,#1a0000,#0b0b0b);
+background:linear-gradient(180deg,#0b0b0b,#200000,#0b0b0b);
 color:white;
 font-family:Arial;
 margin:0;
+scroll-behavior:smooth;
 }
 
 .navbar{
@@ -16,7 +17,7 @@ align-items:center;
 .nav-left{
 display:flex;
 align-items:center;
-gap:25px;
+gap:30px;
 }
 
 .logo{
@@ -28,7 +29,6 @@ font-size:20px;
 .nav-link{
 color:white;
 text-decoration:none;
-font-size:14px;
 position:relative;
 transition:0.3s;
 }
@@ -38,7 +38,7 @@ content:"";
 position:absolute;
 width:0%;
 height:2px;
-background:#ff2b2b;
+background:red;
 left:0;
 bottom:-5px;
 transition:0.3s;
@@ -59,12 +59,6 @@ color:#ff2b2b;
 padding:5px 10px;
 margin-left:5px;
 cursor:pointer;
-transition:0.3s;
-}
-
-.lang button:hover{
-background:#ff2b2b;
-color:white;
 }
 
 .hero{
@@ -81,14 +75,6 @@ margin-bottom:20px;
 
 .subtitle{
 color:#ff2b2b;
-font-weight:bold;
-letter-spacing:2px;
-animation:glow 2s infinite alternate;
-}
-
-@keyframes glow{
-from{text-shadow:0 0 5px red;}
-to{text-shadow:0 0 20px red;}
 }
 
 .desc{
@@ -117,12 +103,10 @@ box-shadow:0 0 15px red;
 
 .skills{
 padding:80px 20px;
-max-width:900px;
-margin:auto;
 text-align:center;
 }
 
-.skills-wrapper{
+.skills-container{
 max-width:600px;
 margin:auto;
 }
@@ -171,64 +155,36 @@ transition:0.3s;
 }
 
 .card:hover{
-border-color:red;
 box-shadow:0 0 20px red;
-transform:scale(1.02);
-}
-
-.card-header{
-display:flex;
-align-items:center;
-gap:15px;
-margin-bottom:10px;
-}
-
-.server-logo{
-width:50px;
-height:50px;
-border-radius:10px;
-}
-
-.role{
-margin-left:auto;
-background:#ff2b2b;
-padding:6px 12px;
-border-radius:6px;
-font-size:12px;
-font-weight:bold;
-}
-
-.date{
-margin-top:20px;
-color:#aaa;
-transition:0.3s;
-}
-
-.date:hover{
-color:#ff2b2b;
-transform:scale(1.05);
+transform:scale(1.03);
 }
 
 .contact{
 text-align:center;
-padding:80px 20px;
+padding:100px 20px;
 background:#111;
 }
 
-.contact h2{
-font-size:28px;
-letter-spacing:2px;
-animation:glow 2s infinite alternate;
+.contact-box{
+display:inline-block;
+margin-top:20px;
+padding:20px 40px;
+border:2px solid red;
+border-radius:10px;
+animation:pulse 2s infinite;
 }
 
 .discord-link{
 color:#3b82f6;
 text-decoration:none;
+font-size:18px;
 font-weight:bold;
 }
 
-.discord-link:hover{
-text-decoration:underline;
+@keyframes pulse{
+0%{box-shadow:0 0 5px red}
+50%{box-shadow:0 0 20px red}
+100%{box-shadow:0 0 5px red}
 }
 
 @keyframes load{
