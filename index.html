@@ -15,7 +15,15 @@
 
 <nav class="navbar">
 
+<div class="nav-left">
+
 <div class="logo">FARRUKOOO</div>
+
+<a href="#skills" class="nav-link" id="navSkills">HABILIDADES</a>
+<a href="#projects" class="nav-link" id="navProjects">REFERENCIAS Y PROYECTOS</a>
+<a href="#contact" class="nav-link" id="navContact">CONTACTAME</a>
+
+</div>
 
 <div class="lang">
 <button id="es">ES</button>
@@ -41,7 +49,7 @@ si me necesitas no dudes en contactarme.
 
 <a class="contact-btn"
 href="https://discord.com/users/724713816553816134"
-target="_blank">
+target="_blank" id="heroContact">
 
 Contactame
 
@@ -49,14 +57,16 @@ Contactame
 
 </section>
 
-<section class="skills">
+<section class="skills" id="skills">
 
-<h2>MIS HABILIDADES</h2>
+<h2 id="skillsTitle">Mis habilidades</h2>
+
+<div class="skills-wrapper">
 
 <div class="skill">
 
 <div class="skill-title">
-YAML / Configuración
+<span id="skill1">YAML / Configuración</span>
 <span>80%</span>
 </div>
 
@@ -69,7 +79,7 @@ YAML / Configuración
 <div class="skill">
 
 <div class="skill-title">
-Gestión de Equipos
+<span id="skill2">Gestión de Equipos</span>
 <span>85%</span>
 </div>
 
@@ -82,7 +92,7 @@ Gestión de Equipos
 <div class="skill">
 
 <div class="skill-title">
-Solución de Problemas
+<span id="skill3">Solución de Problemas</span>
 <span>80%</span>
 </div>
 
@@ -92,11 +102,13 @@ Solución de Problemas
 
 </div>
 
+</div>
+
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
 
-<h2>SERVIDORES EN LOS QUE HE TRABAJADO</h2>
+<h2 id="projectsTitle">Referencias y proyectos</h2>
 
 <div class="card">
 
@@ -107,11 +119,11 @@ src="https://cdn.discordapp.com/attachments/1470942666366910536/1481765483362521
 
 <h3>KENIBOX NETWORK</h3>
 
-<span class="role">FOUNDER</span>
+<span class="role" id="founderRole">FOUNDER</span>
 
 </div>
 
-<p>
+<p id="projectDesc">
 Kenibox fue el comienzo de todo, empeze como helper sin saber mucho en el tema de configuración
 pero poco a poco mejore mi rango hasta llegar al rango (Dueño).
 Desde ese entonces fue un giro en mi y aprendi a configurar.
@@ -126,11 +138,11 @@ no seguir con el proyecto.
 
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
 
-<h2>CONTACTAME</h2>
+<h2 id="contactTitle">CONTACTAME</h2>
 
-<p>
+<p id="contactDesc">
 Contactame a través de Discord.
 </p>
 
