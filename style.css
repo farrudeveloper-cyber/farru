@@ -319,7 +319,7 @@ nav a.active, nav a:hover {
 .bar-90::after { width: 90%; }
 .bar-95::after { width: 95%; }
 .bar-100::after { width: 100%; }
-.bar-40::after { width: 40%; }
+.bar-45::after { width: 45%; }
 .bar-40::after { width: 40%; }
 
 /* --- Sección Referencias (Derecha) --- */
