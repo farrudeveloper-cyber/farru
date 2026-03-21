@@ -1,20 +1,24 @@
 :root {
+    /* Fondo y Superficies */
     --bg-page: #050505;
     --bg-card: #0b0b0b;
     --bg-element: #111111;
     
+    /* Texto */
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
     --text-muted: #555555;
     
+    /* Acento Rojo Farrukooo */
     --red-vibrant: #ff2a2a;
     --red-glow: rgba(255, 42, 42, 0.35);
-    --red-muted: rgba(255, 42, 42, 0.05);
     
+    /* Sombras Neumórficas */
     --shadow-card-outer: 0 10px 40px rgba(0, 0, 0, 0.7);
     --shadow-neumorphic-out: -6px -6px 16px rgba(255, 255, 255, 0.012), 6px 6px 20px rgba(0, 0, 0, 0.5);
     --shadow-neumorphic-in: inset -2px -2px 8px rgba(255, 255, 255, 0.01), inset 2px 2px 10px rgba(0, 0, 0, 0.4);
 
+    /* Estética */
     --border-glass: 1px solid rgba(255, 255, 255, 0.03);
     --radius-large: 24px;
     --radius-med: 16px;
