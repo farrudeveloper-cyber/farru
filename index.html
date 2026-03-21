@@ -1,117 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FARRU | Portfolio</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Tu Nombre</title>
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
+    <header>
+        <div class="container header-content">
+            <div class="profile-meta">
+                <img src="/path/to/your/avatar_small.png" alt="Avatar" class="avatar-small">
+                <div class="profile-text">
+                    <h1>Tu Nombre</h1>
+                    <p>Portafolio</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio" class="active">Inicio</a></li>
+                    <li><a href="#trayectoria">Trayectoria</a></li>
+                    <li><a href="#trabajos">Mis trabajos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#referencias">Referencias</a></li>
+                    <li><a href="#sobremi">Sobre mi</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="#contacto" class="btn-main">Contactame</a>
+        </div>
+    </header>
 
-<div class="logo">FARRU</div>
+    <main class="container">
+        
+        <section id="inicio" class="main-panel neumorphic-card">
+            <div class="panel-intro">
+                <div class="intro-left">
+                    <span class="tag tag-red">● Server Dev - Discord Dev</span>
+                    <h2 class="hero-text">Hola, soy <span class="highlight-red">ASD</span></h2>
+                    <p class="description">
+                        Me especializo en ambitos sociales dentro de comunidades: administración, creación y mantenimiento de servidores. Trabajo tanto en Minecraft como en Discord, cuidando estética y eficiencia para que el resultado se vea bien y funcione mejor.
+                    </p>
+                    <p class="role-command">$ role: Server Dev</p>
+                    <div class="intro-actions">
+                        <a href="#contacto" class="btn-sub card-neumorphic-btn">Contactame</a>
+                        <a href="#trayectoria" class="btn-sub card-neumorphic-btn">Ver trayectoria</a>
+                    </div>
+                    <div class="meta-tags">
+                        <span class="tag tag-icon tag-round">📍 México</span>
+                        <span class="tag tag-icon tag-round">⚡ Estetica + eficiencia</span>
+                    </div>
+                </div>
+                <div class="intro-right">
+                    <div class="globe-container card-neumorphic-btn">
+                        <div class="globe-text">MX</div>
+                    </div>
+                    <div class="terminal-container card-neumorphic-btn">
+                        <p>usuario_discord</p>
+                        <pre>
+usuario@portafolio:~$ whoami
+tu_usuario (Tu Nombre)
+usuario@portafolio:~$ focus
+aesthetics, efficiency, communities</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="nav-center">
-<a href="#inicio" class="nav-item active">Inicio</a>
-<a href="#trayectoria" class="nav-item">Trayectoria</a>
-<a href="#proyectos" class="nav-item">Trabajos</a>
-<a href="#skills" class="nav-item">Habilidades</a>
-<a href="#contacto" class="nav-item">Contacto</a>
-</div>
+        <section id="trabajos" class="work-section neumorphic-card">
+            <h3 class="section-title">MIS TRABAJOS</h3>
+            <p class="section-subtitle">Aquí presento una selección de mis proyectos y colaboraciones destacadas en servidores de Minecraft y comunidades de Discord, enfocados en innovación y calidad.</p>
+            <div class="project-grid">
+                <div class="project-card card-neumorphic-btn">
+                    <img src="/path/to/your/minecraft_icon.png" alt="Minecraft Icon" class="project-icon">
+                    <h4>Aetherium Network</h4>
+                    <p>Aetherium Network is a collaborrative & collaborative in servidorers. Astherium Network...</p>
+                    <a href="#" class="btn-card">Ver detalles</a>
+                </div>
+                <div class="project-card card-neumorphic-btn">
+                    <img src="/path/to/your/discord_icon.png" alt="Discord Icon" class="project-icon">
+                    <h4>Discord Community Hub</h4>
+                    <p>Discord Community Hub presents a commumity hub snemicsrear a conmattee de Discord.</p>
+                    <a href="#" class="btn-card">Ver detalles</a>
+                </div>
+                <div class="project-card card-neumorphic-btn">
+                    <img src="/path/to/your/modpack_icon.png" alt="Modpack Icon" class="project-icon">
+                    <h4>Modpack Integration</h4>
+                    <p>Modpack Integration enttone a moviideres modpack integration y arodeesiree integratien...</p>
+                    <a href="#" class="btn-card">Ver detalles</a>
+                </div>
+            </div>
+        </section>
 
-<a href="#contacto" class="btn-nav">Contáctame</a>
+        <div class="skill-ref-row">
+            
+            <section id="habilidades" class="skills-section neumorphic-card">
+                <h3 class="section-title">HABILIDADES</h3>
+                <p class="section-subtitle">Mi conjunto de herramientas técnicas y blandas, perfeccionadas a lo largo de mi carrera para la gestión de comunidades y el desarrollo de servidores.</p>
+                <div class="skills-grid">
+                    
+                    <div class="skill-category">
+                        <h5>Gestión de Servidores:</h5>
+                        <ul class="skill-list">
+                            <li><i class="fab fa-discord"></i> Discord API <span class="skill-bar bar-70"></span></li>
+                            <li><i class="fas fa-server"></i> MC Server Admin <span class="skill-bar bar-80"></span></li>
+                            <li><i class="fas fa-plug"></i> Plugin Dev <span class="skill-bar bar-60"></span></li>
+                            <li><i class="fas fa-tools"></i> Moderation Tools <span class="skill-bar bar-90"></span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h5>Desarrollo:</h5>
+                        <ul class="skill-list">
+                            <li><i class="fab fa-js"></i> JavaScript <span class="skill-bar bar-80"></span></li>
+                            <li><i class="fas fa-database"></i> SQL <span class="skill-bar bar-60"></span></li>
+                            <li><i class="fab fa-git-alt"></i> Git <span class="skill-bar bar-70"></span></li>
+                            <li><i class="fab fa-linux"></i> Linux Admin <span class="skill-bar bar-60"></span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h5>Habilidades Blandas:</h5>
+                        <ul class="skill-list">
+                            <li><i class="fas fa-users"></i> Liderazgo <span class="skill-bar bar-90"></span></li>
+                            <li><i class="fas fa-comments"></i> Comunicación <span class="skill-bar bar-80"></span></li>
+                            <li><i class="fas fa-hands-helping"></i> Resolución de Conflictos <span class="skill-bar bar-90"></span></li>
+                            <li><i class="fas fa-clock"></i> Gestión de Tiempo <span class="skill-bar bar-70"></span></li>
+                        </ul>
+                    </div>
 
-</nav>
+                </div>
+            </section>
 
-<!-- HERO -->
-<section id="inicio" class="section hero">
+            <section id="referencias" class="references-section neumorphic-card">
+                <h3 class="section-title">REFERENCIAS</h3>
+                <p class="section-subtitle">Lo que otros dicen de mi trabajo y colaboración en proyectos pasados.</p>
+                <div class="reference-cards">
+                    <div class="reference-card card-neumorphic-btn">
+                        <div class="ref-profile">
+                            <i class="fas fa-user-circle avatar-ref-placeholder"></i>
+                            <div class="ref-text">
+                                <h6>El_Admin_Senior</h6>
+                                <p>Admin. Senior</p>
+                            </div>
+                        </div>
+                        <p class="quote">"Trabajo impecable y muy profesional."</p>
+                    </div>
+                    <div class="reference-card card-neumorphic-btn">
+                        <div class="ref-profile">
+                            <i class="fas fa-user-circle avatar-ref-placeholder"></i>
+                            <div class="ref-text">
+                                <h6>Comunidad_MC_Staff</h6>
+                                <p>Comunidad MG Staff</p>
+                            </div>
+                        </div>
+                        <p class="quote">"Soluciones rápidas y efectivas, un gran valor para el equipo."</p>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-<div class="hero-box">
+        <section id="sobremi" class="about-section neumorphic-card">
+            <h3 class="section-title">Sobre mi</h3>
+            <p class="section-subtitle">Aquí puedes escribir una breve presentación sobre ti, tu experiencia y tu enfoque profesional.</p>
+        </section>
 
-<div class="hero-left">
+        <section id="trayectoria" class="timeline-section neumorphic-card">
+            <div class="timeline-header">
+                <span class="timeline-accent-bar"></span>
+                <h3 class="section-title-large">TRAYECTORIA</h3>
+            </div>
+            <p class="timeline-subtitle">Experiencia trabajando en distintos equipos y comunidades, con responsabilidades de soporte, moderación, gestión y desarrollo.</p>
+            
+            <div class="timeline-container-visual">
+                <div class="timeline-node active-node">
+                    <div class="node-icon card-neumorphic-btn">
+                        <i class="fas fa-minus"></i>
+                        <p class="node-title">Trayectoria</p>
+                        <p class="node-sub">Aún no hay entradas.</p>
+                    </div>
+                </div>
+                <div class="timeline-bar">
+                    <div class="timeline-progress active-progress"></div>
+                </div>
+            </div>
+        </section>
 
-<div class="badge">🔴 Server Dev - Discord Dev</div>
+    </main>
 
-<h1>Hola, soy <span>FARRU</span></h1>
-
-<p>
-Me especializo en comunidades, configuración de plugins,
-bots de Discord y administración de servidores.
-</p>
-
-<div class="hero-buttons">
-<a href="#contacto" class="btn-primary">Contáctame</a>
-<a href="#proyectos" class="btn-secondary">Ver trabajos</a>
-</div>
-
-<div class="tags">
-<span>🇨🇱 Chile</span>
-<span>Estética + eficiencia</span>
-</div>
-
-</div>
-
-<div class="hero-right">
-<div class="circle">MX</div>
-
-<div class="terminal">
-<p>$ whoami</p>
-<p>farru_dev</p>
-<p>$ focus</p>
-<p>aesthetics, efficiency, communities</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<!-- TRAYECTORIA -->
-<section id="trayectoria" class="section">
-
-<h2 class="section-title">TRAYECTORIA</h2>
-<p class="section-desc">
-Experiencia trabajando en servidores y comunidades.
-</p>
-
-<div class="timeline">
-<div class="timeline-item">
-<h3>Inicio</h3>
-<p>Comencé como helper y fui subiendo hasta developer.</p>
-</div>
-</div>
-
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-
-<h2 class="section-title">HABILIDADES</h2>
-
-<div class="skills-box">
-
-<div class="skill">
-<span>YAML / Configuración</span>
-<div class="bar"><div class="progress" style="width:80%"></div></div>
-</div>
-
-<div class="skill">
-<span>Gestión de Equipos</span>
-<div class="bar"><div class="progress" style="width:85%"></div></div>
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto" class="section contact">
-<h2>Contacto</h2>
-<a href="https://discord.com" class="btn-primary">@f4rru</a>
-</section>
+    <footer class="container">
+        <p>&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
