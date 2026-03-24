@@ -50,7 +50,7 @@ h3, h4, h5 {
 }
 
 /* Elementos Neumórficos Hundidos */
-.card-neumorphic-btn, .terminal-container {
+.card-neumorphic-btn {
     background-color: var(--bg-element);
     border-radius: var(--radius-med);
     padding: 20px;
@@ -59,12 +59,94 @@ h3, h4, h5 {
     border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
+/* Ajuste específico para la Terminal para que no herede hover de botones */
+.terminal-container {
+    background-color: var(--bg-element);
+    border-radius: var(--radius-med);
+    box-shadow: var(--shadow-neumorphic-in);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+    overflow: hidden;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
 .card-neumorphic-btn:hover {
     box-shadow: var(--shadow-neumorphic-out);
     background-color: var(--bg-card);
 }
 
-/* Botones Principales (Rojos Vibrantísimos con Resplandor) */
+/* --- Estilos de la Ventana de Terminal (Powershell) --- */
+.terminal-header {
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.terminal-title {
+    color: var(--text-muted);
+    font-size: 11px;
+    opacity: 0.6;
+}
+
+.terminal-body {
+    padding: 15px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.terminal-line {
+    margin-bottom: 4px;
+}
+
+.prompt {
+    color: var(--text-secondary);
+}
+
+.command {
+    color: var(--text-primary);
+    margin-left: 5px;
+}
+
+.output {
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.cursor {
+    color: var(--red-vibrant);
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* --- Botones Principales --- */
 .btn-main, .btn-card {
     background-color: var(--red-vibrant);
     color: var(--text-primary) !important;
@@ -103,7 +185,7 @@ h3, h4, h5 {
     text-shadow: 0 0 15px var(--red-glow);
 }
 
-/* --- Header y Navegación (Estilo Cristal Oscuro) --- */
+/* --- Header y Navegación --- */
 header {
     width: 100%;
     padding: 20px 0;
@@ -128,8 +210,8 @@ header {
 }
 
 .avatar-small {
-    width: 40px; /* Tamaño forzado */
-    height: 40px; /* Tamaño forzado */
+    width: 40px;
+    height: 40px;
     border-radius: var(--radius-round);
     object-fit: cover;
     border: 2px solid rgba(255,255,255,0.05);
@@ -165,7 +247,7 @@ nav a.active, nav a:hover {
     border-radius: var(--radius-round);
 }
 
-/* --- ESTRUCTURA DE REJILLA PRINCIPAL (Dos Columnas como la imagen) --- */
+/* --- ESTRUCTURA DE REJILLA PRINCIPAL --- */
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -173,7 +255,7 @@ nav a.active, nav a:hover {
     margin-bottom: 30px;
 }
 
-/* --- Sección Inicio (Fuerza Colocación Izquierda) --- */
+/* --- Sección Inicio --- */
 .intro-section {
     grid-column: 1 / 2;
 }
@@ -206,7 +288,7 @@ nav a.active, nav a:hover {
     margin-top: 15px;
 }
 
-/* Globo MX con fondo rojo radial vibrante */
+/* Globo MX */
 .globe-container {
     height: 150px;
     display: flex;
@@ -216,29 +298,12 @@ nav a.active, nav a:hover {
     color: var(--text-primary);
     font-size: 3rem;
     font-weight: bold;
-    border-radius: 50% !important; /* Forzamos círculo */
+    border-radius: 50% !important;
     box-shadow: var(--shadow-neumorphic-out);
     margin-bottom: 20px;
 }
 
-/* Terminal Neumórfica */
-.terminal-container {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 13px;
-    color: var(--text-secondary);
-}
-
-.terminal-container h6 {
-    color: var(--text-muted);
-    font-size: 11px;
-    margin-bottom: 10px;
-}
-
-.terminal-container pre {
-    white-space: pre-wrap;
-}
-
-/* --- Sección Trabajos (Derecha) y Grid de Proyectos --- */
+/* --- Sección Trabajos --- */
 .work-section {
     grid-column: 2 / 3;
 }
@@ -268,7 +333,7 @@ nav a.active, nav a:hover {
     line-height: 1.5;
 }
 
-/* --- Sección Habilidades (Izquierda) --- */
+/* --- Sección Habilidades --- */
 .skills-section {
     grid-column: 1 / 2;
 }
@@ -315,14 +380,13 @@ nav a.active, nav a:hover {
     box-shadow: 0 0 10px var(--red-glow);
 }
 
-/* Anchos gráficos forzados */
 .bar-90::after { width: 90%; }
 .bar-95::after { width: 95%; }
 .bar-100::after { width: 100%; }
 .bar-45::after { width: 45%; }
 .bar-40::after { width: 40%; }
 
-/* --- Sección Referencias (Derecha) --- */
+/* --- Sección Referencias --- */
 .references-section {
     grid-column: 2 / 3;
 }
@@ -368,7 +432,7 @@ nav a.active, nav a:hover {
     color: var(--text-secondary);
 }
 
-/* --- Sección Sobre Mi (Inferior Full Ancho) --- */
+/* --- Sección Sobre Mi --- */
 .about-section {
     grid-column: 1 / span 2;
     margin-bottom: 30px;
@@ -381,7 +445,7 @@ nav a.active, nav a:hover {
     max-width: 800px;
 }
 
-/* --- Sección Trayectoria (Inferior Full Ancho) --- */
+/* --- Sección Trayectoria --- */
 .timeline-section {
     grid-column: 1 / span 2;
 }
@@ -418,7 +482,7 @@ nav a.active, nav a:hover {
     flex-direction: column;
     align-items: center;
     width: 150px;
-    margin-top: 100px; /* Margen para simular trayectoria superior */
+    margin-top: 100px;
 }
 
 .timeline-node {
