@@ -288,19 +288,47 @@ nav a.active, nav a:hover {
     margin-top: 15px;
 }
 
-/* Globo MX */
+/* --- BANNER (Actualización de .globe-container) --- */
 .globe-container {
     height: 150px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle, rgba(255, 42, 42, 0.25) 0%, #0c0c0c 70%);
+    background-color: var(--bg-element);
     color: var(--text-primary);
-    font-size: 3rem;
-    font-weight: bold;
-    border-radius: 50% !important;
-    box-shadow: var(--shadow-neumorphic-out);
+    border-radius: var(--radius-large) !important;
+    box-shadow: var(--shadow-neumorphic-in);
     margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border: var(--border-glass);
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.globe-text {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+}
+
+.globe-container:hover .banner-img {
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 /* --- Sección Trabajos --- */
